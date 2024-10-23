@@ -1,3 +1,7 @@
+
+// Week 2(b) - Majority element
+// Leetcode function to determine the majority element of the array(size=n) that appears more than n/2 times in the array
+
 int majorityElement(int* nums, int numsSize) {
     int candidate = nums[0];
     int count = 1;
