@@ -1,3 +1,7 @@
+
+// Week 2(a) - Infix to Postfix conversion
+// Program to convert the given infix expression to postfix expression
+
 #include <stdio.h>
 #include <string.h>
 
