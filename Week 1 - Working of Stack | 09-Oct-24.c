@@ -1,3 +1,7 @@
+
+// Week 1 - Working of Stack | 09-Oct-24
+// Program to perform PUSH, POP and Display operations on a stack
+
 #include<stdio.h>
 int stack[100];
 int top=-1;
