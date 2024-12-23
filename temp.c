@@ -93,3 +93,79 @@ int main() {
 
 
 */
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+struct cqueue{
+    int front, rear, size;
+    int cqueue[100];
+};
+void ENQUEUE(struct cqueue* cq, int ele){
+    if((cq->rear + 1) % cq->size == cq->front){
+         printf("\n<error: circular queue overflow>\n");
+    }else if(cq->rear==-1){
+        cq->front=0;
+        cq->rear=0;
+        cq->cqueue[cq->rear] = ele;
+    } else {
+        cq->rear = (cq->rear + 1) % cq->size;
+        cq->cqueue[cq->rear] = ele;
+    }
+}
+int DEQUEUE(struct cqueue* cq){
+    if(cq->rear==-1){
+        printf("\n<error: circular queue underflow>");
+    }else if(cq->front==cq->rear){
+        int ele = cq->cqueue[cq->front];
+        cq->front = -1;
+        cq->rear = -1;
+        return ele;
+    }else{
+        int ele = cq->cqueue[cq->front];
+        cq->front = (cq->front + 1)%(cq->size);
+        return ele;
+    }
+}
+void DISPLAY(struct cqueue* cq){
+    if(cq->rear==-1){
+        printf("\n<error: circular queue underflow>");
+    }else{
+        printf("\nCircular queue items: \n");
+        for (int i=cq->front; i!=cq->rear; (i++)%cq->size){
+            printf("[%3d]", cq->cqueue[i]);
+        }printf("[%3d] \n", cq->cqueue[cq->rear]);
+
+        for (int i=cq->front; i!=cq->rear; (i++)%cq->size){
+            printf("%3d  ", i);
+        }printf("%3d  \n", cq->rear);
+    }
+}
+int main(){
+    int enqele, choice, deqele;
+    struct cqueue cq;
+    cq.front=-1;
+    cq.rear=-1;
+    printf("\nEnter the circular queue size: ");
+    scanf("%d", &cq.size);
+    while(1){
+        printf("\nEnter choice:");
+        printf("\n(1)ENQUEUE (2)DEQUEUE (3)DISPLAY (4)EXIT : ");
+        scanf("%d",&choice);
+        switch(choice){
+            case 1: printf("Enter the element to enqueue: ");
+                    scanf("%d",&enqele);
+                    ENQUEUE(&cq,enqele);
+                    break;
+            case 2: deqele = DEQUEUE(&cq);
+                    break;
+            case 3: DISPLAY(&cq);
+                    break;
+            case 4: exit(0);
+                    
+        }
+    }return 0;
+}
+
+
+*/
